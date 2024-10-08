@@ -17,3 +17,4 @@ GitHub Actions
 Cloud Deployment
   -Deploy on Cloud Plaform of choice.
 
+EC: Add GitHub Workflow, automatically deploy application to cloud platform when changes are made to the main branch of your repository. Add a field to the JSON output of your application and verify the cahnges is deployed.

@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 // or use port 3000 if port is undefined.
 
 const epochTime = Math.floor(Date.now() /100000);
-// Math.floor method rounds a number down to nearest integer
+//Math.floor method rounds a number down to nearest integer
 //Date.now method is used to get the current timestamp in milliseconds
 //Get epoch time in seconds
 const jsonObject = { epochTime };

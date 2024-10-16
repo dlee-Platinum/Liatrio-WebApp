@@ -29,7 +29,7 @@ steps:
  
   - name: Build Docker Container
       run: |
-        docker run -d -p 80:3000 web-app1.0
+        docker run -d -p 80:3000 web-app1.0 .
 
 
 # 4)Test container with apprentice-action (Will try to access localhost 80)

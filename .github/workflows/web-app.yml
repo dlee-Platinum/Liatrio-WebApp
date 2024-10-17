@@ -18,7 +18,7 @@
 # 2)Build docker image using Dockerfile. (This will create an image in Docker root directory)
     - name: Build Docker image
       run: |
-        docker build -t dleeplatinum/web-app
+        docker build .
 
 # 3)Build container with docker image. ( Container created in the root directory)
     - name: Build and push

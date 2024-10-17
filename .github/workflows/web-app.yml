@@ -1,4 +1,4 @@
- Name: CI/CD web-app
+ name: CI/CD web-app
 
  on:
   push:
@@ -6,12 +6,12 @@
   pull_request:
     branches: [ "main" ]
     
-jobs:
-build:
+ jobs:
+  build:
     runs-on: ubuntu-latest
 
 # 1)check repository for Dockerfile
-  steps:
+    steps:
     - name: Checkout repository
       uses: actions/checkout@v4
 

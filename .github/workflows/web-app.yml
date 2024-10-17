@@ -18,18 +18,18 @@
 # 2)Build docker image using Dockerfile. (This will create an image in Docker root directory)
     - name: Build Docker image
       run: |
-        docker build -t my-app:latest .
+        docker build -t dleeplatinum/web-app
 
 # 3)Build container with docker image. ( Container created in the root directory)
     - name: Build and push
       uses: docker/build-push-action@v6
       with:
          push: true
-         tags: user/app:latest
+         tags: dleeplatinum/web-app
  
     - name: Build Docker Container
       run: |
-        docker run -d -p 80:3000 web-app1.0 .
+        docker run -d -p 80:3000 web-app.
 
 
 # 4)Test container with apprentice-action (Will try to access localhost 80)

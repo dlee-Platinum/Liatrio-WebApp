@@ -14,7 +14,13 @@
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-
+      
+    - name: Log in to Docker Hub
+      uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
+      with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          
 # 2)Build docker image using Dockerfile. (This will create an image in Docker root directory)      
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push-action@v6

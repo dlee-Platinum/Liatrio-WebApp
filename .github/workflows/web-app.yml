@@ -44,7 +44,7 @@
 
     - name: Run Docker Container
       run: |
-          docker run --name 4075c6f852c1fb5a4a72e517f6e6407298610d49eb90045b00ee25224524e050 -d -p 80:3000
+          docker run --name 4075c6f852c1fb5a4a72e517f6e6407298610d49eb90045b00ee25224524e050 -d -p 80:3000 sha256:c92c6017ff1247a16619f4ae6650b48e6e749971f7494454b9e5419726472b60
      #with:
     # Docker registry address
          # docker-registry-url:  localhost:80/ubuntu

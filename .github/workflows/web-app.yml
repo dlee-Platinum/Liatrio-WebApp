@@ -40,6 +40,9 @@
     # Docker File Directory, Default Current Directory (.)
        docker_file: .
     # optional, default is .
-          
+
+    - name: run tests
+      uses: liatrio/github-actions/apprentice-action@master
+    
     
      

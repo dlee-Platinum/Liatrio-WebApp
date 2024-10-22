@@ -45,7 +45,7 @@
 
     - name: Run Docker Container
       run: |
-          docker run -d -p 80:3000 web-app:1.0
+          docker run -d -p 80:3000
      #with:
     # Docker registry address
          # docker-registry-url:  localhost:80/ubuntu

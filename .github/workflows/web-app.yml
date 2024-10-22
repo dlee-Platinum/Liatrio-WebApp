@@ -1,0 +1,57 @@
+ name: CI/CD web-app
+
+ on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    
+ jobs:
+  build:
+    runs-on: ubuntu-latest
+
+# 1)check repository for Dockerfile
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Log in to Docker Hub
+      uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
+      with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          
+            
+    - name: Build and Push to DockerHub
+  # You may pin to the exact commit or the version.
+  # uses: MaximilianoBz/dockerhub-buildpush@372110d600041736063b948d05005b6039d8fb0c
+      uses: MaximilianoBz/dockerhub-buildpush@v1.1
+      with:
+    # Docker Registry Url, eg: docker.io
+       registry_url: localhost:80/ubuntu
+    # Docker Image Repository Name, eg: username/demo-app
+       repository_name: dleeplatinum/web-app
+    # Docker Login UserName, from: https://hub.docker.com/
+       user_name: dleeplatinum
+    # Docker Login Access Token, from: https://hub.docker.com/
+       password: Helloworld@2024
+    # Image Build Version
+       image_version: 1.0
+    # Docker File Directory, Default Current Directory (.)
+       docker_file: .
+    # optional, default is .
+
+
+    - name: Run Docker Container
+      run: |
+          docker run -d -p 80:3000 web-app
+            with:
+            docker-registry-url:  localhost:80/ubuntu
+            image: sha256:cfaa8be68be941372bca66550e64369ad7ede4c2f3b51176c7c214838ca9752a
+            tag: pr-2-bffcdd3
+
+    - name: run tests
+      uses: liatrio/github-actions/apprentice-action@master
+    
+    
+     

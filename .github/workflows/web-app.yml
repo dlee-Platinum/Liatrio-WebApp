@@ -44,14 +44,13 @@
 
     - name: Run Docker Container
       run: |
-          docker run --name 4075c6f852c1fb5a4a72e517f6e6407298610d49eb90045b00ee25224524e050 -d -p 80:3000 web-app:1.0
+          docker run --name 4075c6f852c1fb5a4a72e517f6e6407298610d49eb90045b00ee25224524e050 -d -p 80:3000 web-app
     # Docker registry address
          # docker-registry-url:  localhost:80/ubuntu
     # Image name
         #    image: sha256:cfaa8be68be941372bca66550e64369ad7ede4c2f3b51176c7c214838ca9752a
     # Image tag
            # tag: pr-2-bffcdd3
-  
 
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@master

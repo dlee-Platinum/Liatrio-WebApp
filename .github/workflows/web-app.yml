@@ -20,7 +20,8 @@
       uses: mr-smithers-excellent/docker-build-push-action@v6
       with:
        image: dleeplatinum/web-app
-       registry: docker.io
+       registry: registry.hub.docker.com
+       repository: "${{ github.event.repository.name }}"
        username: ${{ secrets.DOCKERHUB_USERNAME }}
        password: ${{ secrets.DOCKERHUB_TOKEN }}
     

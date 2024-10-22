@@ -17,10 +17,10 @@
 
 # 2)Build docker image using Dockerfile. (This will create an image in Docker root directory)      
     - name: Build and Push Docker Image
-      uses: docker/build-push-action@v6
+      uses: mr-smithers-excellent/docker-build-push-action@v6
       with:
        image: dleeplatinum/web-app
-       registry: registry.hub.docker.com
+       registry: docker.io
        username: ${{ secrets.DOCKERHUB_USERNAME }}
        password: ${{ secrets.DOCKERHUB_TOKEN }}
     

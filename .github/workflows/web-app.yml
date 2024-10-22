@@ -42,18 +42,18 @@
     # optional, default is .
 
 
+
     - name: Run Docker Container
-  # You may pin to the exact commit or the version.
-  # uses: tonys-code-base/run-container-action@d4d60beeff934c82ef02f95614a2e59685ff01e0
-      uses: tonys-code-base/run-container-action@v1.0.0
-      with:
+      run: |
+          docker run -d -p 80:3000 web-app:1.0
+     #with:
     # Docker registry address
-        docker-registry-url:  localhost:80/ubuntu
+         # docker-registry-url:  localhost:80/ubuntu
     # Image name
-        image: sha256:cfaa8be68be941372bca66550e64369ad7ede4c2f3b51176c7c214838ca9752a
+        #    image: sha256:cfaa8be68be941372bca66550e64369ad7ede4c2f3b51176c7c214838ca9752a
     # Image tag
-        tag: pr-2-bffcdd3
- 
+           # tag: pr-2-bffcdd3
+  
 
 
 

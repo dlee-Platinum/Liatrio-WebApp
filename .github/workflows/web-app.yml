@@ -27,7 +27,7 @@
       with:
        image: dleeplatinum/web-app
        registry: docker.io
-       repository: "${{ github.event.dleeplatinum/web-app.name }}"
+       repository: "${{ github.event.repository.name }}"
        username: ${{ secrets.DOCKERHUB_USERNAME }}
        password: ${{ secrets.DOCKERHUB_TOKEN }}
     

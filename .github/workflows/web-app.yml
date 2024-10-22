@@ -19,8 +19,8 @@
     - name: Build and Push Docker Image
       uses: docker/build-push-action@v6
       with:
-       image: Docker-hub-repo/image-name
+       image: dleeplatinum/web-app
        username: ${{ secrets.DOCKERHUB_USERNAME }}
        password: ${{ secrets.DOCKERHUB_TOKEN }}
-       push: true
-       tags: dleeplatinum/web-app
+    
+     

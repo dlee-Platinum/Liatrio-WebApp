@@ -20,6 +20,7 @@
       uses: docker/build-push-action@v6
       with:
        image: dleeplatinum/web-app
+       registry: docker.io
        username: ${{ secrets.DOCKERHUB_USERNAME }}
        password: ${{ secrets.DOCKERHUB_TOKEN }}
     

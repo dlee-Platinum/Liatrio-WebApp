@@ -44,6 +44,7 @@
 
     - name: Run Docker Container
       run: |
+          docker pull dleeplatinum/web-app:pr-2-bffcdd3
           docker run -d -p 80:3000 localhost:80/ubuntu/web-app:1.0
      #      with:
      #      docker-registry-url:  localhost:80/ubuntu

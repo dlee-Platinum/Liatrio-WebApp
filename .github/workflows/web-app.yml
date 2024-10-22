@@ -42,10 +42,9 @@
     # optional, default is .
 
 
-
     - name: Run Docker Container
       run: |
-          docker run -d -p 80:3000
+          docker run --name 4075c6f852c1fb5a4a72e517f6e6407298610d49eb90045b00ee25224524e050 -d -p 80:3000
      #with:
     # Docker registry address
          # docker-registry-url:  localhost:80/ubuntu
@@ -54,13 +53,6 @@
     # Image tag
            # tag: pr-2-bffcdd3
   
-
-
-
-
-
-
-          
 
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@master

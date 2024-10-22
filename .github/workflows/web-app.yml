@@ -20,15 +20,6 @@
       with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          
-# 2)Build docker image using Dockerfile. (This will create an image in Docker root directory)      
-    - name: Build and Push Docker Image
-      uses: mr-smithers-excellent/docker-build-push-action@v6
-      with:
-       image: dleeplatinum/web-app
-       registry: docker.io
-       repository: "${{ github.event.repository.name }}"
-       username: ${{ secrets.DOCKERHUB_USERNAME }}
-       password: ${{ secrets.DOCKERHUB_TOKEN }}
+
     
      
